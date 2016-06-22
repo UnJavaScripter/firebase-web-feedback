@@ -8,12 +8,18 @@
       margin: 0;
     }
 
-    nav {
+    nav, footer {
       background: whitesmoke;
       padding: 1em 2em 1em 2em;
+      flex-direction: row;
+      display: flex;
     }
-
-    nav>a {
+    nav>div, footer>div {
+      flex: 1;
+      display: flex;
+      justify-content: center;
+    }
+    nav>div>a, footer>div>a {
       text-transform: uppercase;
       padding-right: 1em;
     }
@@ -37,15 +43,21 @@
     .image-container>img {
       box-shadow: 2px 1px 4px -1px #666;
     }
+
   </style>
 </head>
 <body>
   
   <nav>
-    <a href="/">Home</a>
-    <a href="#foobar">foobar</a>
-    <a href="#wasd">wasd</a>
-    <a href="#lala">lala</a>
+    <div>
+      <a href="/">Home</a>
+      <a href="#foobar">foobar</a>
+      <a href="#wasd">wasd</a>
+      <a href="#lala">lala</a>
+    </div>
+    <div>
+      <a href="https://github.com/UnJavaScripter/firebase-web-feedback" target="_blank">repositorio en github</a>
+    </div>
   </nav>
 
   <main>
@@ -145,6 +157,14 @@
       </p>
     </article>
   </main>
+
+
+  <footer>
+    <div>
+      <a href="https://github.com/UnJavaScripter/firebase-web-feedback" target="_blank">repositorio en github</a>
+      <a href="https://twitter.com/unJavaScripter" target="_blank">@unJavaScripter</a>
+    </div>
+  </footer>
 
   <script src="./feedbackWidget.js"></script>
 
