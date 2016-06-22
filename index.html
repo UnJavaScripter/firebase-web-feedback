@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Firebase Feedback widget</title>
+  <style type="text/css">
+    body {
+      font-family: sans-serif;
+      margin: 0;
+    }
+
+    nav {
+      background: whitesmoke;
+      padding: 1em 2em 1em 2em;
+    }
+
+    nav>a {
+      text-transform: uppercase;
+      padding-right: 1em;
+    }
+
+    main {
+      width: 60%;
+      margin-left: 20%;
+      margin-bottom: 10em;
+    }
+
+    main>article {
+      border-bottom: 1px solid #aaa;
+      padding-bottom: 3em;
+      margin-bottom: 6em;
+    }
+
+    .image-container {
+      text-align: center;
+    }
+
+    .image-container>img {
+      box-shadow: 2px 1px 4px -1px #666;
+    }
+  </style>
+</head>
+<body>
+  
+  <nav>
+    <a href="/">Home</a>
+    <a href="#foobar">foobar</a>
+    <a href="#wasd">wasd</a>
+    <a href="#lala">lala</a>
+  </nav>
+
+  <main>
+    <article>
+      <a name="wasd">
+        <h2>WASD</h2>
+      </a>
+      <div class="image-container">
+        <img src="http://unsplash.it/400/200/?random" height="200" width="400">
+      </div>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+        cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+        proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+      </p>
+    </div>
+    
+    
+    <div>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+        cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+        proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+      </p>
+    </article>
+    
+    <article>
+      <a name="foobar">
+        <h2>FooBar</h2>
+      </a>
+      <div class="image-container">
+        <img src="http://unsplash.it/g/400/200/?random" height="200" width="400">
+      </div>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+        cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+        proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+      </p>
+    </div>
+    
+    <div>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+        cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+        proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+      </p>
+    </div>
+    
+    <div>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+        cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+        proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+      </p>
+    </div>
+    
+    <div>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+        cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+        proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+      </p>
+    </article>
+    
+    <article>
+      <a name="lala">
+        <h2>Lala</h2>
+      </a>
+      <div class="image-container">
+        <img src="http://unsplash.it/400/200/?random&blur" height="200" width="400">
+      </div>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+        cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+        proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+      </p>
+    </article>
+  </main>
+
+  <script src="./feedbackWidget.js"></script>
+
+  <script src="https://www.gstatic.com/firebasejs/live/3.0/firebase.js"></script>
+  <script>
+    // Initialize Firebase
+    let config = {
+      apiKey: "AIzaSyCKJe5k5ljDTYDmHMQrZXsA_mvvA3T86lU",
+      authDomain: "fir-ad413.firebaseapp.com",
+      databaseURL: "https://fir-ad413.firebaseio.com",
+      storageBucket: "fir-ad413.appspot.com",
+    };
+
+    let fireCoso = firebase.initializeApp(config);
+
+    // Inicializamos el widget
+    let fw = new FeedbackWidget(fireCoso);
+
+  </script>
+
+
+</body>
+</html>
