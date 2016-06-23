@@ -151,7 +151,7 @@ class FeedbackWidget {
 
 
   onTransitionEnd (evt) {
-    console.log('end');
+
     this.textSection.classList.remove('fw--animatable');
     
     //this.textSection.style.transform = 'none';
