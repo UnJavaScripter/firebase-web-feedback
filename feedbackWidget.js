@@ -136,28 +136,20 @@ class FeedbackWidget {
   }
   
   firebaseAuth() {
+
     if(firebase){
       
       firebase.auth().signInAnonymously().catch(function(error) {
-        // Handle Errors here.
-        var errorCode = error.code;
-        var errorMessage = error.message;
-        // ...
+        console.error(error);
       });
 
       firebase.auth().onAuthStateChanged(function(user) {
         if (user) {
-          // User is signed in.
-          var isAnonymous = user.isAnonymous;
-          var uid = user.uid;
-          console.log('signin');
-          // ...
+          console.log('Signed in');
+          console.log(user);
         } else {
-          console.log('signout');
-          // User is signed out.
-          // ...
+          console.log('Signed out, bye!');
         }
-        // ...
       });
 
     }
@@ -169,8 +161,6 @@ class FeedbackWidget {
 
     this.textSection.classList.remove('fw--animatable');
     
-    //this.textSection.style.transform = 'none';
-
     if(this.textSection.classList.contains('fw--expanded-text-container_enter')){
       this.textField.focus();
     }
