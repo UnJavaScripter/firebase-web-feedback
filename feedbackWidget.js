@@ -72,7 +72,7 @@ class FeedbackWidget {
           color: white;
         }
 
-        .fw--button-send {
+        .fw--button-submit {
           background: #44a8fb;
           color: white;
         }
@@ -92,8 +92,8 @@ class FeedbackWidget {
         <div class="fw--text-area-container">
           <textarea class="fw--text-area" placeholder="Cuéntanos tu experiencia" rows="5" cols="25"></textarea>
           <div>
-            <button class="fw--button-close" onClick="fw.close()" title="Cancelar">X</button>
-            <button class="fw--button-send" onClick="fw.send()" title="Enviar">></button>
+            <button class="fw--button-close" title="Cancelar">X</button>
+            <button class="fw--button-submit" title="Enviar">></button>
           </div>
         </div>
         
@@ -108,13 +108,28 @@ class FeedbackWidget {
     this.userName = userName || `guest_${Math.ceil(Math.random()*1000)}`;
 
     this.fwOpened = false;
+
     this.textSection = document.querySelector(".fw--text-area-container");
     this.textField = document.querySelector(".fw--text-area");
-    this.submitButton = document.querySelector(".fw--button-open");
     
+    this.openButton = document.querySelector(".fw--button-open");
+    this.submitButton = document.querySelector(".fw--button-submit");
+    this.closeButton = document.querySelector(".fw--button-close");
+  
+    // Animation stuff    
     this.textSection_initial = this.textSection.getBoundingClientRect();
 
+    // Function bindings
     this.onTransitionEnd = this.onTransitionEnd.bind(this);
+    this.submit = this.submit.bind(this);
+    this.close = this.close.bind(this);
+    this.open = this.open.bind(this);
+
+    // Listeners
+    this.openButton.addEventListener('click', this.submit);
+    this.submitButton.addEventListener('click', this.submit);
+    this.closeButton.addEventListener('click', this.close);
+
 
     this.firebaseAuth();
 
@@ -175,7 +190,7 @@ class FeedbackWidget {
     this.textSection.addEventListener('transitionend', this.onTransitionEnd);
   }
 
-  send () {
+  submit () {
     if(this.textField.value){
 
       let feedbackObj = {
